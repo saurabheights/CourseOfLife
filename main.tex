@@ -1,0 +1,212 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% !TeX program = lualatex
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+\usepackage{lmodern}
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[svgnames]{xcolor}
+\usepackage[colorlinks=true, linkcolor=Maroon, urlcolor=Maroon, citecolor=blue]{hyperref}
+\usepackage[symbol]{footmisc}
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{main.bib}
+
+
+% Set applicant's personal data for header
+\name{Saurabh Khanduja}
+\email{khandujasaurabh@gmail.com}
+\github{https://github.com/saurabheights}
+\linkedin{https://linkedin.com/in/saurabheights}
+\address{Phone: +49 1772075019 \linebreak Address: Willi-graf-strasse 9, Room 337\linebreak Munich 80805}
+\contacts{}
+
+
+\begin{document}
+
+    % Print the header
+    \makeheader
+    
+    % academic projects
+    \begin{cvsection}{Academic Projects}
+    \begin{cvsubsection}[2]{Master Thesis}{CAMP\footnote{\href{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}}, Technical University of Munich}{Dec 2020 -- Present}
+    \textit{Weakly Supervised Semantic Segmentation using Low-level neural network features}
+        \begin{itemize}
+            \item Proposed a new loss that bridges gap between localization and semantic segmentation map.
+            \item The method improves mIOU metric by over 5\% on vgg, resnet and inception backbone models.
+        \end{itemize}
+    \end{cvsubsection}
+    
+    \begin{cvsubsection}{Inter-Disciplinary Project}{Technical University of Munich}{Dec 2019 -- May 2020}
+    \textit{Neural Response Interpretation through the Lens of Critical Paths, CVPR 2021 (Pytorch, python) \cite{khakzar-2021}}
+        \begin{itemize}
+        \item Our work focuses on improving interpretability using path selection via
+neurons’ contributions to the response.
+        \end{itemize}
+    \end{cvsubsection}
+    
+    \begin{cvsubsection}{Student Projects}{Technical University of Munich}{Nov 2018 -- Jan 2019}
+    \textit{Killing Fusion, CVPR 2017 (C++, Matlab) \cite{slavcheva2017killingfusion}}
+        \begin{itemize}
+        \item Open-source implementation of Killing Fusion.
+        \item Use Killing energy, Levelset energy and data energy to provide non-rigid registration between RGBD frames.
+        \end{itemize}
+    \textit{Scan completion and semantic segmentation (Python, Pytorch, hdf5)}
+        \begin{itemize}
+        \item Multi-task learning to improve scan completion of RGBD Voxel Grid of indoor scenes.
+        \item We proposed additional learning of semantic information loss will improve scan completion of indoor scenes.
+        \end{itemize}
+    \end{cvsubsection}
+    
+    \end{cvsection}
+    
+    % work experience
+    \begin{cvsection}{Employment}
+
+            \begin{cvsubsection}{ML Engineer}{Edge Case Research Gmbh}{May 2019 -- Present}
+        \textit{Improving Core ML Products and Production Infrastructure}
+            \begin{itemize}
+                \item Improving edgecase(model failure) discovery.
+                \item Infrastructure improvements involving better UX - Error reporting and ML backend optimization.
+            \end{itemize}
+        \end{cvsubsection}
+    
+            \begin{cvsubsection}{Student Tutor}{Technical University of Munich}{Oct 2018 -- March 2019}    
+        \textit{Machine Learning (IN2210) \footnote{\href{https://www.in.tum.de/en/daml/home/}{https://www.in.tum.de/en/daml/home/}}}
+            \begin{itemize}
+                \item The course is offered every winter semester to master students at TUM and is attended by more than 500 students. 
+                \item Involved in creating assignments for the course and helped students with the homework. 
+            \end{itemize}
+        \end{cvsubsection}
+    
+        \begin{cvsubsection}{Work Student\footnote{Deep Learning and Computer Vision\label{ws}}}{Terraloupe Gmbh}{April 2018 - April 2020}
+            \textit{Geo Data Management Tool (Python, Django, Postgres)}
+            \begin{itemize}
+                \item Development of inventory database supporting GIS query.
+                \item Development of Django based server application for querying the inventory.
+            \end{itemize}
+                
+            \textit{Core Deep Learning Pipeline (Python, Keras, Tensorflow)}
+            \begin{itemize}
+                \item Development of single pipeline supporting Image Classification, Object Detection and Semantic segmentation tasks.
+                \item Data loading from both local and remote(google storage) supported.
+                \item Object based metrics implemented for semantic segmentation.
+            \end{itemize}
+            
+        \end{cvsubsection}
+        
+        \begin{cvsubsection}{Image Team Lead}{Roposo, India}{Nov 2015 -- Oct 2017}        
+        \textit{Image Processing Service Development (Java, AWS, OpenCV, ffmpeg)}
+            \begin{itemize}
+                \item Enable dynamic compression using SSIM metric
+                \item Reduction in image plagiarism using metadata analysis.
+                \item Improve robustness to different image formats, such as webp, png, gif, etc.
+                \item Implemented Beauty filter based on variational approach by Farbman, Zeev, et al. \cite{farbman2008edge}
+                \item Optimizations to efficiently use servers, leading to 70\% cost reduction.
+            \end{itemize}
+        \end{cvsubsection}
+          
+        \begin{cvsubsection}{Software Development Engineer}{Amazon, India}{Oct 2014 -- Nov 2015}        
+        \textit{Resell Product Form (Java, DynamoDB)}
+            \begin{itemize}
+                \item Development of data model to reduce the payload data of selling used product form. 
+                \item Redesign form completion to reduce number of clicks.
+                \item The payload was reduced over 99.5\% and improved form completion rate by 500\%.
+            \end{itemize}
+        \end{cvsubsection}
+
+        \begin{cvsubsection}{Software Development Engineer}{KritiKal Solutions Pvt. Ltd., India}{June 2012 -- Oct 2014}
+            \textit{Atmosphere Turbulence Removal Module (C++, Cuda, DLib, OpenCV, Qt)}
+            \begin{itemize}
+                \item Development of Atmosphere Turbulence Removal Module based on Non-Rigid Registration method \cite{rueckert1999nonrigid}.
+                \item Optimizations added using libpthread and cuda, achieving 240x speedup.
+            \end{itemize}
+            
+            \textit{Wide Area Tracking Module (C++, OpenCV, Qt)}
+            \begin{itemize}
+                \item Designed and implemented a module for controlling Pan and Tilt Device.
+                \item Real time stitching of multiple CCD/Infrared Cameras to produce a wider view.
+                \item Change Detection and Tracking module to detect objects of interest.
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+    
+
+    \begin{cvsection}{Education}
+        \begin{cvsubsection}{Munich, Germany}{Technical University of Munich}{Oct 2017 -- Present}
+            \begin{itemize}
+                \item M.Sc. in Informatics, GPA: ~1.5/1.0
+                \item Graduate Coursework: Machine Learning; Multiple View Geometry; Deep Learning for Computer Vision; Protein Prediction;Tracking and Detection in Computer Vision; 3D Scanning & Motion Capture; Principles of Computer Vision.
+            \end{itemize}
+        \end{cvsubsection}
+        \begin{cvsubsection}{Dhanbad, India}{Indian Institute of Technology}{July 2008 -- May 2012}
+            \begin{itemize}
+                \item B.Tech. in Computer Science and Engineering,  CGPA: 7.51/10.0
+                \item Undergraduate Coursework: Object Oriented Programming; Data Structure and Algorithms; Theory of Computation; Operating System; Computer Networks; Computer Architecture.
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+    
+    \begin{cvsection}{Technical Skills}
+        \begin{cvsubsection}{}{}{}    
+            \begin{itemize}
+                \item Programming Languages: Advanced - C, Python, Java C++. Intermediate - Matlab.
+                \item ML/CV Toolkits: PyTorch, Keras, Tensorflow, OpenCV, Numpy, SciPy, Rasterio, ffmpeg, Dlib.
+                \item Application Developement: REST, PostgreSQL, Play Framework, AWS, Docker/Kubernetes, Django.
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+    
+    \begin{cvsection}{Additional Experience and Awards}
+        \begin{cvsubsection}{}{}{}    
+            \begin{itemize}
+                \item Achieved Outstanding rank in performance review at KritiKal Solutions for WATM.
+                \item Highest project completion rate at KritiKal Solutions.
+                \item Achieved All India rank 1159 in All India Engineering Entrance Exam (AIEEE-2008) out of 950,000 participants.
+                \item Hiring Experience and leading Image Team at Roposo.
+                \item Open source contributions: torchvision, metadata-extractor and imantics\footnote{\href{https://resume.github.io/?saurabheights}{https://resume.github.io/?saurabheights}}.
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+    
+    \begin{cvsection}{Languages}
+        \begin{cvsubsection}{}{}{}    
+            \begin{itemize}
+                \item English (Full Professional Proficiency), German (A1 Level), Hindi (Native).
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+    
+        \begin{cvsection}{References}
+
+         \printbibliography[heading=none]
+
+    \end{cvsection}
+    
+\end{document}
