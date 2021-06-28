@@ -53,63 +53,28 @@
     % Print the header
     \makeheader
     
-    % academic projects
-    \begin{cvsection}{Academic Projects}
-    \begin{cvsubsection}[2]{Master Thesis}{CAMP\footnote{\href{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}}, Technical University of Munich}{Dec 2020 -- Present}
-    \textit{Weakly Supervised Semantic Segmentation using Low-level neural network features}
-        \begin{itemize}
-            \item We proposed a novel approach of dissecting classification neural networks to extract semantic maps with higher coverage of objects.
-            \item The method improves mIOU metric by over 20\% on vgg and resnet backbone models.
-        \end{itemize}
-    \end{cvsubsection}
-    
-    \begin{cvsubsection}{Inter-Disciplinary Project}{Technical University of Munich}{Dec 2019 -- May 2020}
-    \textit{Neural Response Interpretation through the Lens of Critical Paths, CVPR 2021 (Pytorch, python) \cite{khakzar-2021}}
-        \begin{itemize}
-        \item Our work focuses on improving interpretability using path selection via
-neurons’ contributions to the response.
-        \end{itemize}
-    \end{cvsubsection}
-    
-    \begin{cvsubsection}{Student Projects}{Technical University of Munich}{Nov 2018 -- Jan 2019}
-    \textit{Killing Fusion, CVPR 2017 (C++, Matlab) \cite{slavcheva2017killingfusion}}
-        \begin{itemize}
-        \item Open-source implementation of Killing Fusion.
-        \item Use Killing energy, Level-set energy and data energy to provide non-rigid registration between RGBD frames.
-        \end{itemize}
-    \textit{Scan completion and semantic segmentation (Python, Pytorch, hdf5)}
-        \begin{itemize}
-        \item Multi-task learning to improve scan completion of RGBD Voxel Grid of indoor scenes.
-        \item We proposed additional learning of semantic information loss will improve scan completion of indoor scenes.
-        \end{itemize}
-    \end{cvsubsection}
-    
+    \begin{cvsection}{Summary}
+    \textit{Computer Vision specialist with 5+ years professional experience, including 2 years devoted to developing real-time vision modules for national defense and 2 years to building image and video processing service for a social media platform. I specialized in neural network interpretatibility and its applications to weakly supervised semantic segmentation as part of my master's degree. As a work student at Terraloupe, I designed a training data management tool for geospatial annotations and at Edge Case Research I designed new SPIs for measuring safety of an autonomous vehicle perception system.}
     \end{cvsection}
     
-    % work experience
-    \begin{cvsection}{Employment}
 
-            \begin{cvsubsection}{ML Engineer}{Edge Case Research Gmbh}{May 2019 -- Present}
-        \textit{Improving Core ML Products and Production Infrastructure}
+    % work experience
+    \begin{cvsection}{Professional Experience}
+
+            \begin{cvsubsection}{ML Engineer}{Edge Case Research Gmbh}{May 2020 -- Present}
+        \textit{Improving Core ML Products and Production Infrastructure (Python, Go, Kubernetes)}
             \begin{itemize}
-                \item Improving edge-case(model failure) discovery.
-                \item Infrastructure improvements involving better UX - Error reporting and ML backend optimization.
+                \item Designed 4 new safety performance indicators to measure safety of autonomous vehicles.
+                \item Designed benchmark to evaluate internal defect predictors on real data as well as synthetically introduced defects.
+                \item Integrated serving and testing of pytorch models and integrated tracking metrics to benchmark multi-object tracking associators.
             \end{itemize}
         \end{cvsubsection}
     
-            \begin{cvsubsection}{Student Tutor}{Technical University of Munich}{Oct 2018 -- March 2019}    
-        \textit{Machine Learning (IN2210) \footnote{\href{https://www.in.tum.de/en/daml/home/}{https://www.in.tum.de/en/daml/home/}}}
+        \begin{cvsubsection}{ML Engineer}{Terraloupe Gmbh}{ April 2018 - April 2020}
+            \textit{Training Data Management Tool (Python, Django, Postgres)}
             \begin{itemize}
-                \item The course is offered every winter semester to master students at TUM and is attended by more than 500 students. 
-                \item Involved in creating assignments for the course and helped students with the homework. 
-            \end{itemize}
-        \end{cvsubsection}
-    
-        \begin{cvsubsection}{Work Student\footnote{Deep Learning and Computer Vision\label{ws}}}{Terraloupe Gmbh}{April 2018 - April 2020}
-            \textit{Geo Data Management Tool (Python, Django, Postgres)}
-            \begin{itemize}
-                \item Development of inventory database supporting GIS query.
-                \item Development of Django based server application for querying the inventory.
+                \item Development of postgres-based inventory database.
+                \item Development of inventory query service with support for filtering over data distribution to extract desired subset for training neural networks.
             \end{itemize}
                 
             \textit{Core Deep Learning Pipeline (Python, Keras, Tensorflow)}
@@ -118,26 +83,23 @@ neurons’ contributions to the response.
                 \item Optimization of training and inference phase with resulting GPU and CPU utilization to over $90\%$.
                 \item Object based metrics implemented for semantic segmentation.
             \end{itemize}
-            
         \end{cvsubsection}
         
         \begin{cvsubsection}{Image Team Lead}{Roposo, India}{Nov 2015 -- Oct 2017}        
         \textit{Image Processing Service Development (Java, AWS, OpenCV, ffmpeg)}
             \begin{itemize}
-                \item Enable dynamic compression using SSIM metric
-                \item Reduction in image plagiarism using metadata analysis.
-                \item Improve robustness to different image formats, such as webp, png, gif, etc.
-                \item Implemented Beauty filter based on variational approach by Farbman, Zeev, et al. \cite{farbman2008edge}
                 \item Optimizations to efficiently use servers, leading to 70\% cost reduction.
+                \item Enable dynamic compression using SSIM metric increasing user retention by 40\%.
+                \item Quantifying social posts ownership by measuring plagiarism using image metadata analysis.
+                \item Implemented Beauty filter based on variational approach by Farbman, Zeev, et al. \cite{farbman2008edge}
             \end{itemize}
         \end{cvsubsection}
           
         \begin{cvsubsection}{Software Development Engineer}{Amazon, India}{Oct 2014 -- Nov 2015}        
         \textit{Resell Product Form (Java, DynamoDB)}
             \begin{itemize}
-                \item Development of data model to reduce the payload data of selling used product form. 
-                \item Redesign form completion to reduce number of clicks.
-                \item The payload was reduced over 99.5\% and improved form completion rate by 500\%.
+                \item Development of data model to reduce user interaction for form completion and data payload for mobile usage.
+                \item Improved form completion rate by 500\% with reduction of data payload by 99.5\%.
             \end{itemize}
         \end{cvsubsection}
 
@@ -152,23 +114,62 @@ neurons’ contributions to the response.
             \begin{itemize}
                 \item Designed and implemented a module for controlling Pan and Tilt Device.
                 \item Real time stitching of multiple CCD/Infrared Cameras to produce a wider view.
-                \item Change Detection and Tracking module to detect objects of interest.
+                \item Change Detection and Tracking module to detect and track objects of interest.
             \end{itemize}
         \end{cvsubsection}
     \end{cvsection}
     
+    \newpage  % New page
+    
+        % academic projects
+    \begin{cvsection}{Academic Projects}
+    \begin{cvsubsection}[2]{Master Thesis}{CAMP\footnote{\href{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}{http://campar.in.tum.de/Chair/ResearchIssueComputerVision}}, Technical University of Munich}{Dec 2020 -- June 2021}
+    \textit{Weakly Supervised Semantic Segmentation using Low-level neural network features}
+        \begin{itemize}
+            \item We proposed a novel approach of dissecting classification neural networks to extract semantic maps.
+            \item The method improves mIOU metric by over 20\% on vgg and resnet backbone models w.r.t. class-activation maps.
+        \end{itemize}
+    \end{cvsubsection}
+    
+    \begin{cvsubsection}{Research Assistance Project}{Technical University of Munich}{Dec 2019 -- May 2020}
+    \textit{Neural Response Interpretation through the Lens of Critical Paths, CVPR 2021 (Pytorch, python) \cite{khakzar-2021}}
+        \begin{itemize}
+        \item Improving interpretability using path selection via
+neurons’ contributions to the response.
+        \item Accepted at CVPR 2021
+        \end{itemize}
+    \textit{Killing Fusion, CVPR 2017 (C++, Matlab) \cite{slavcheva2017killingfusion}}
+        \begin{itemize}
+        \item Use Killing energy, Level-set energy and data energy to provide non-rigid registration between RGBD frames.
+        \end{itemize}
+    \textit{Scan completion and semantic segmentation (Python, Pytorch, hdf5)}
+        \begin{itemize}
+        \item Multi-task learning to improve scan completion of RGBD Voxel Grid of indoor scenes.
+        \item We proposed additional learning of semantic information loss will improve scan completion of indoor scenes.
+        \end{itemize}
+    \end{cvsubsection}
+    
+    \begin{cvsubsection}{Student Tutor}{Technical University of Munich}{Oct 2018 -- March 2019}    
+        \textit{Machine Learning (IN2210) \footnote{\href{https://www.in.tum.de/en/daml/home/}{https://www.in.tum.de/en/daml/home/}}}
+            \begin{itemize}
+                \item The course is offered to master students at TUM and is attended by more than 500 students. 
+                \item Involved in creating assignments for the course and helped students with the homework. 
+            \end{itemize}
+        \end{cvsubsection}
+    
+    \end{cvsection}
 
     \begin{cvsection}{Education}
         \begin{cvsubsection}{Munich, Germany}{Technical University of Munich}{Oct 2017 -- Present}
             \begin{itemize}
                 \item M.Sc. in Informatics, GPA: ~1.4/1.0
-                \item Graduate Coursework: Machine Learning; Multiple View Geometry; Deep Learning for Computer Vision; Protein Prediction;Tracking and Detection in Computer Vision; 3D Scanning \& Motion Capture; Principles of Computer Vision.
+                \item Graduate Coursework: Machine Learning; Multiple View Geometry; Deep Learning; Protein Prediction;Tracking and Detection in Computer Vision; 3D Scanning \& Motion Capture; Principles of Computer Vision.
             \end{itemize}
         \end{cvsubsection}
         \begin{cvsubsection}{Dhanbad, India}{Indian Institute of Technology}{July 2008 -- May 2012}
             \begin{itemize}
                 \item B.Tech. in Computer Science and Engineering,  CGPA: 7.51/10.0
-                \item Undergraduate Coursework: Object Oriented Programming; Data Structure and Algorithms; Theory of Computation; Operating System; Computer Networks; Computer Architecture.
+                \item Undergraduate Coursework: Object Oriented Programming; Data Structure and Algorithms; Theory of Computation; Operating System; Computer Networks; Computer Architecture and Digital Image Processing.
             \end{itemize}
         \end{cvsubsection}
     \end{cvsection}
@@ -176,9 +177,9 @@ neurons’ contributions to the response.
     \begin{cvsection}{Technical Skills}
         \begin{cvsubsection}{}{}{}    
             \begin{itemize}
-                \item Programming Languages: Advanced - C, Python, Java C++. Intermediate - Matlab.
+                \item Programming Languages: C, C++, Python, Java, Matlab.
                 \item ML/CV Toolkits: PyTorch, Keras, Tensorflow, OpenCV, Numpy, SciPy, Rasterio, ffmpeg, Dlib.
-                \item Application Developement: REST, PostgreSQL, Play Framework, AWS, Docker/Kubernetes, Django.
+                \item Application Developement: REST, Django, Neo4j, PostgreSQL, MongoDB, AWS, Docker and Kubernetes.
             \end{itemize}
         \end{cvsubsection}
     \end{cvsection}
@@ -186,19 +187,9 @@ neurons’ contributions to the response.
     \begin{cvsection}{Additional Experience and Awards}
         \begin{cvsubsection}{}{}{}    
             \begin{itemize}
-                \item Achieved All India rank 1159 in All India Engineering Entrance Exam (AIEEE-2008) out of 950,000 participants.
-                \item Achieved Outstanding rank in performance review at KritiKal Solutions for WATM.
-                \item Highest project completion rate at KritiKal Solutions.
+                \item Achieved All India rank 1159 in All India Engineering Entrance Exam, 2008 out of 950,000 participants.
                 \item Hiring Experience and leading Image Team at Roposo.
                 \item Open source contributions: torchvision, metadata-extractor and imantics\footnote{\href{https://resume.github.io/?saurabheights}{https://resume.github.io/?saurabheights}}.
-            \end{itemize}
-        \end{cvsubsection}
-    \end{cvsection}
-    
-    \begin{cvsection}{Languages}
-        \begin{cvsubsection}{}{}{}    
-            \begin{itemize}
-                \item English (Full Professional Proficiency), German (A1 Level), Hindi (Native).
             \end{itemize}
         \end{cvsubsection}
     \end{cvsection}
@@ -210,3 +201,4 @@ neurons’ contributions to the response.
     \end{cvsection}
     
 \end{document}
+

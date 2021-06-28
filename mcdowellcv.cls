@@ -23,11 +23,11 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{10pt}
-%\def\mainfontface{Times New Roman}
+\def\mainfontface{Times New Roman}
 
-%\DeclareOption{calibri}{%
-%  \def\mainfontface{Calibri}
-%}
+\DeclareOption{calibri}{%
+  \def\mainfontface{Calibri}
+}
 
 \ProcessOptions\relax
 
@@ -39,10 +39,8 @@
 
 % Set font face
 \usepackage{fontspec}
-\setmainfont{Calibri}
-
-%\setmainfont[SmallCapsFeatures={Renderer=Basic},
-%Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
+\setmainfont[SmallCapsFeatures={Renderer=Basic},
+Ligatures={TeX}]{\mainfontface}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
@@ -233,6 +231,6 @@
 {
 	\end{adjustwidth}
 	\vspace*{\aftersubsectionspace}
-	\vspace*{\aftersubsectionspace}
 }
 \makeatother
+
