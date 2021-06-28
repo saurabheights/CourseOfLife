@@ -233,4 +233,3 @@ Ligatures={TeX}]{\mainfontface}
 	\vspace*{\aftersubsectionspace}
 }
 \makeatother
-
