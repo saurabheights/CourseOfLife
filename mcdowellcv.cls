@@ -169,14 +169,37 @@ Ligatures={TeX}]{\mainfontface}
 %--------------------------------------------------------------------------------
 %                            Sections and Subsections                           -
 %--------------------------------------------------------------------------------
+\definecolor{steelblue}{HTML}{007BA7}
+\usepackage{xstring}
+\makeatletter
 
+% Color first 3 letters of a single word
+\newcommand{\colorfirstthree}[1]{%
+  \StrLeft{#1}{3}[\first]%
+  \StrGobbleLeft{#1}{3}[\rest]%
+  \textcolor{steelblue}{\first}\rest
+}
+
+% Apply to every word in a string
+\newcommand{\colorsectiontitle}[1]{%
+  \@for\word:=#1\do{%
+    \colorfirstthree{\word}\space
+  }%
+}
+
+\makeatother
 % Print a section header
 \makeatletter
-\newenvironment{cvsection}[1]{
+\newenvironment{cvsection}[2][]{%
 	\vspace*{\beforesectionheaderspace}
 	% Set text margins to equal \tabcolsep (6pt by default)
 	\begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
-		\textbf{\textsc{#1}}
+		{\large\bfseries
+          \if\relax\detokenize{#1}\relax\else
+            {\color{steelblue}#1}\hspace{0.6em}
+          \fi
+          \textbf{\large\textsc{\colorsectiontitle{#2}}}
+        }
 	\end{adjustwidth}
 	\vspace*{\beforesectionheaderhrulespace}
 	\hrule height \sectionheaderhrlueheight
