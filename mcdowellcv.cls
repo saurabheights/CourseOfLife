@@ -150,7 +150,7 @@ Ligatures={TeX}]{\mainfontface}
         {\small\@roles}\\[6pt]
 
         % ===== Address =====
-        {\footnotesize\itshape\textcolor{gray}{\@address}}\\[10pt]
+        {\footnotesize\itshape\textcolor{#dddddd}{\@address}}\\[10pt]
 		
         % ===== Contact line =====
         {\footnotesize
