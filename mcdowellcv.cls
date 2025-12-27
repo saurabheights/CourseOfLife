@@ -23,11 +23,11 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{10pt}
-%\def\mainfontface{Times New Roman}
+\def\mainfontface{Times New Roman}
 
-%\DeclareOption{calibri}{%
-%  \def\mainfontface{Calibri}
-%}
+\DeclareOption{calibri}{%
+  \def\mainfontface{Calibri}
+}
 
 \ProcessOptions\relax
 
@@ -39,13 +39,11 @@
 
 % Set font face
 \usepackage{fontspec}
-\setmainfont{Calibri}
-
-%\setmainfont[SmallCapsFeatures={Renderer=Basic},
-%Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
+\setmainfont[SmallCapsFeatures={Renderer=Basic},
+Ligatures={TeX}]{\mainfontface}
 
 % Remove paragraph indentation
-\usepackage[parfill]{parskip} 
+\usepackage[parfill]{parskip}
 
 % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{array} 
@@ -118,66 +116,51 @@
 %                            Header Setup and Printing                          -
 %--------------------------------------------------------------------------------
 
-% Address
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
 \makeatletter
 
-\newcommand\address[1]{\def\@address{#1}}
-\address{}
-
-\newcommand\printaddress{
-	\small{\@address}
-}
-
-\makeatother
-
-% Name
-\makeatletter
-
+% Core identity
 \newcommand\name[1]{\def\@name{#1}}
-\name{}
+\newcommand\roles[1]{\def\@roles{#1}}
+\newcommand\address[1]{\def\@address{#1}}
+\newcommand\phone[1]{\def\@phone{#1}}
 
+% Links
 \newcommand\email[1]{\def\@email{#1}}
-\email{}
-
 \newcommand\github[1]{\def\@github{#1}}
-\github{}
-
 \newcommand\linkedin[1]{\def\@linkedin{#1}}
-\linkedin{}
+\newcommand\scholar[1]{\def\@scholar{#1}}
+\newcommand\portfolio[1]{\def\@portfolio{#1}}
+\newcommand\stackoverflow[1]{\def\@stackoverflow{#1}}
 
-\newcommand\printname{
-	\typeout {kokoko}
-	\typeout \spaceskip
-	\spaceskip \namespaceskip \relax
-	\textbf{\LARGE\textls[110]{\textbf{\textsc{\@name}}}} \linebreak \linebreak
-	\small{Email: \href{mailto:\@email}{\@email}}      \linebreak
-	\small{Github: \href{\@github}{\@github}}   \linebreak
-	\small{Linkedin: \href{\@linkedin}{\@linkedin}} \linebreak
-}
-
-
-
-
-\makeatother
-
-% Contacts
-\makeatletter
-
-\newcommand\contacts[1]{\def\@contacts{#1}}
-\contacts{}
-
-\newcommand\printcontacts{
-	\small{\@contacts}
-}
-
-\makeatother
+% Defaults (avoid undefined warnings)
+\name{}\roles{}\address{}\phone{}\email{}
+\github{}\portfolio{}\linkedin{}\scholar{}\stackoverflow{}
 
 \makeatletter
 \newcommand\makeheader{
 	\begin{center}
-		\begin{tabu} to 1\textwidth { X[l,m] X[.4,c,m] X[r,m] }
-			\printname & \printcontacts & \printaddress \\
-		\end{tabu}	
+        % ===== Name =====
+        {\LARGE\bfseries\textsc{\@name}}\\[6pt]
+
+        % ===== Roles =====
+        {\small\@roles}\\[6pt]
+
+        % ===== Address =====
+        {\footnotesize\itshape\textcolor{gray}{\@address}}\\[10pt]
+		
+        % ===== Contact line =====
+        {\footnotesize
+        \faPhone\ \@phone \; | \;
+        \faEnvelope\ \href{mailto:\@email}{\@email} \; | \;
+        \faGraduationCap\ \href{\@scholar}{Scholar} \; | \;
+        \faGithub\ \href{\@github}{GitHub} \; | \;
+        \faStackOverflow\ \href{\@stackoverflow}{StackOverflow} \; | \;
+        \faLinkedin\ \href{\@linkedin}{LinkedIn}
+        }	
 	\end{center}
 	\vspace*{\afterheaderspace}
 }
@@ -232,7 +215,6 @@
 }
 {
 	\end{adjustwidth}
-	\vspace*{\aftersubsectionspace}
 	\vspace*{\aftersubsectionspace}
 }
 \makeatother
